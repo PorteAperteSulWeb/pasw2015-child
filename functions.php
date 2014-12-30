@@ -1,0 +1,62 @@
+<?php
+
+require (get_stylesheet_directory() . '/include/widget.php');
+
+function pasw2015_child_widgets_init() {
+
+    register_sidebar( array(
+        'name' => 'Special Page (SX)',
+        'id' => 'sidebar-20',
+        'description' => 'Area Widget (1) della Special Page.'
+    ) );
+    register_sidebar( array(
+        'name' => 'Special Page (CX)',
+        'id' => 'sidebar-21',
+        'description' => 'Area Widget (2) della Special Page'
+    ) );
+    register_sidebar( array(
+        'name' => 'Special Page (DX)',
+        'id' => 'sidebar-22',
+        'description' => 'Area Widget (3) della Special Page.'
+    ) );
+	register_sidebar( array(
+        'name' => 'Sidebar Sticky - utilizzata nel nuovo template home child',
+        'id' => 'sidebar-23',
+        'description' => 'Area Widget Sticky.'
+    ) );
+
+
+}
+add_action( 'widgets_init', 'pasw2015_child_widgets_init' );
+
+
+
+/** changing default wordpres email settings */
+ 
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+ 
+function new_mail_from($old) {
+ return 'no-replay@XXXX.it';
+}
+function new_mail_from_name($old) {
+ return 'Istituco Comprensivo XXXXX';
+}
+
+/******* rimozione versione wordpress *******/
+
+function remove_wordpress_version() {
+return '';
+}
+add_filter('the_generator', 'remove_wordpress_version');
+
+
+/******* login errata senza riscontro *******/
+
+function my_login_messages($error) {
+	return '<strong>ERROR</strong>: Autenticazione di accesso non valida.';
+}
+
+add_filter('login_errors','my_login_messages');
+
+?>
