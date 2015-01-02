@@ -18,15 +18,22 @@ create le seguenti sidebar
 
 File function.php
 
-Funzione: changing default wordpress email settings
-questa funzione permette di cambiare i setting di default delle email spedite
-es. impostare il default address: no-replay@miodominio.it
-impostare il nome dell'istituto: Istituco Comprensivo XXXXX
+a. Funzione: changing default wordpress email settings
 
-Funzione: remove_wordpress_version
+questa funzione permette di cambiare i setting di default delle email spedite
+
+es.
+ - impostare il default address: no-replay@miodominio.it
+ - impostare il nome dell'istituto: Istituco Comprensivo XXXXX
+
+b. Funzione: remove_wordpress_version
+
 questa funzione rimuove la versione di wordpress
 
-Funzione: my_login_messages($error)
+c. Funzione: my_login_messages($error)
+
 questa funzione imposta un messaggio generico di errore login, di default l'errore identifica il problema 
-es.La password inserita per il nome utente XXXXX non è corretta.
+
+es.
+ - La password inserita per il nome utente XXXXX non è corretta.
  - ERRORE: Nome utente non valido.
