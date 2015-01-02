@@ -15,3 +15,7 @@ create le seguenti sidebar
 2. special page (cx): utilizzata nel template page-special-widget
 3. special page (dx): utilizzata nel template page-special-widget
 4. sidebar sticky: utilizzata nel template home-page-child
+
+File function.php
+
+verificare funzioni email.
