@@ -57,7 +57,7 @@
 						}?>
                     </div>
                     <div class="detail">
-                    	<h3><span class="hdate"><?php the_time('j M y') ?></span> <a href="<?php the_permalink(); ?>">
+                    	<h3><span class="hdate"  style="float:right; margin-right:10px;"><?php the_time('j M y') ?></span> <a href="<?php the_permalink(); ?>">
                         <?php the_title(); ?></a></h3>
                         <?php if ($excerpt != '' && $excerpt != 0) { the_excerpt(); }?>
                     </div>
