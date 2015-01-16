@@ -76,6 +76,9 @@ jQuery("document").ready(function($){
 	if (get_option('pasw_recapito_scuola') != '') {
 		echo get_option('pasw_recapito_scuola') . ' <img src="' . get_stylesheet_directory_uri() . '/icone/c-telefono.png' . '" alt="icona telefono"/><br/>';
 	}
+	if (get_option('pasw_cfpiva_scuola') != '') {
+		echo get_option('pasw_cfpiva_scuola') . ' <img src="' . get_stylesheet_directory_uri() . '/icone/c-piva.png' . '" alt="icona codice fiscale - p.iva"/><br/>';
+	}
 ?>
 </div>
 
