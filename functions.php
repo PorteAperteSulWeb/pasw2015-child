@@ -64,4 +64,3 @@ function my_login_messages($error) {
 
 add_filter('login_errors','my_login_messages');
 
-?>
