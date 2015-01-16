@@ -1,4 +1,4 @@
-pasw2015-child 0.5
+pasw2015-child 0.6
 ==============
 
 In questo tema child sono state apportate le seguenti modifiche:
