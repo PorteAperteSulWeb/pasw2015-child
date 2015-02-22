@@ -52,6 +52,10 @@ ul.sticky_column li .detail{
   padding-left: 100px;
 }
 
+ul.sticky_column p {
+	margin-right: 5px;
+}
+
 .dest li {
 	position:relative;	
 	}
