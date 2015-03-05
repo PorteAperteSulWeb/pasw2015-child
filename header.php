@@ -11,6 +11,19 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+
+<title><?php if ( function_exists('optimal_title') ) { ?><?php optimal_title(); ?><?php bloginfo('name'); ?><?php } else { ?><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?><?php } ?></title>
+
+<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
+<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php if (get_option('pasw_fixedmenu') == 1) { ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -78,31 +91,27 @@ jQuery("document").ready(function($){
 	}
 ?>
 </div>
-
-<?php 
-if ( display_header_text() ){ ?>
-                <h1 style="color:#<?php header_textcolor(); ?>;">
+            <h1 style="color:#<?php header_textcolor(); ?>;" class="site-title">
                 <a style="color:#<?php header_textcolor(); ?>;" href="<?php bloginfo('url'); ?>">
                     <?php bloginfo('name'); ?>
                 </a>
-				</h1>
-				<?php echo stripslashes(get_bloginfo('description')); ?>
-				<br/>
-<?php
-}
-?>
+            </h1>
+            <div class="site-description"><?php bloginfo('description'); ?>
+            <br/>
 
+            </div>
 
     </div>
 </div>
 
+    <form class="topsearch-div" method="get" id="searchform" action='<?php echo bloginfo('url');?>' >
+        <div>
+            <label class="screen-reader-text" for="s">Cerca:</label>
+            <input placeholder="Cerca..." type="text" value="" name="s" id="s" />
+        </div>
+    </form>
+        
 <div id="topbar">
-
-        <form class="topsearch-div" method="get" id="searchform" action='<?php echo bloginfo('url');?>' >
-            <div><label class="screen-reader-text" for="s">Cerca:</label>
-                <input placeholder="Cerca..." type="text" value="" name="s" id="s" />
-            </div>
-        </form>
 
 <?php
     $append_link = '<ul id="%1$s" class="%2$s">%3$s';
