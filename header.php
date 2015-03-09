@@ -11,19 +11,6 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-
-<title><?php if ( function_exists('optimal_title') ) { ?><?php optimal_title(); ?><?php bloginfo('name'); ?><?php } else { ?><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?><?php } ?></title>
-
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php if (get_option('pasw_fixedmenu') == 1) { ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
