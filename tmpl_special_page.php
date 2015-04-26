@@ -15,5 +15,5 @@ Template Name: Pagina Special Widget
 <?php include(get_stylesheet_directory() . '/include/special-widgets.php'); ?>
 
 </div>
-<?php include(TEMPLATEPATH . '/rightsidebar.php'); ?>
+<?php get_sidebar('right'); ?>
 <?php get_footer(); ?>
