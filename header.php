@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-
-<title><?php if ( function_exists('optimal_title') ) { ?><?php optimal_title(); ?><?php bloginfo('name'); ?><?php } else { ?><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?><?php } ?></title>
-
-<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php if (get_option('pasw_fixedmenu') == 1) { ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
-jQuery("document").ready(function($){
-
+    jQuery("document").ready(function($){
     var nav = $('#topbar');
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > <?php echo get_custom_header()->height + 30; ?>) {
             nav.addClass("f-nav");
@@ -26,13 +20,13 @@ jQuery("document").ready(function($){
             nav.removeClass("f-nav");
         }
     });
-
 });
 </script>
-<?php if ( is_user_logged_in() ) { echo '<style>.f-nav { top:30px; }</style>'; } ?> 
-<?php } ?>
-
 <?php
+    if ( is_user_logged_in() ) {
+        echo '<style>.f-nav { top:30px; }</style>';
+    }
+}
     wp_head();
     include(TEMPLATEPATH . '/include/frontend/google-analytics.php');
 ?>
@@ -108,14 +102,12 @@ jQuery("document").ready(function($){
                 $append_link .= '<li><a href="' . wp_login_url() . '" id="btn-login">Log in</a></li>';
     }
     $append_link .= '</ul>';
-
     if(function_exists('wp_nav_menu') && has_nav_menu( 'menu-2' ) ) {
         wp_nav_menu( array( 'menu' => '', 'items_wrap' => $append_link, 'container' => '', 'menu_class' => 'menu-principale-responsivo', 'theme_location' => 'menu-2' ) );
     } else     {
         echo '
         <ul id="menu-menu-superiore">
             <li id="menu-item-0" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-0">
-
             </li>
         </ul>';
     }
