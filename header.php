@@ -60,6 +60,9 @@
 	if (get_option('pasw_email_scuola') != '') {
 		echo get_option('pasw_email_scuola') . ' <img src="' . get_stylesheet_directory_uri() . '/icone/c-email.png' . '" alt="icona email"/><br/>';
 	}
+	if (get_option('pasw_pec_scuola') != '') {
+		echo get_option('pasw_pec_scuola') . ' <img src="' . get_stylesheet_directory_uri() . '/icone/c-pec.png' . '" alt="icona email pec"/><br/>';
+	}
 	if (get_option('pasw_indirizzo_scuola') != '') {
 		echo get_option('pasw_indirizzo_scuola') . ' <img src="' . get_stylesheet_directory_uri() . '/icone/c-indirizzo.png' . '" alt="icona indirizzo"/><br/>';
 	}
