@@ -63,4 +63,5 @@ function my_login_messages($error) {
 }
 
 add_filter('login_errors','my_login_messages');
+add_filter('pasw2015childedition', function($text) {return 'G';});
 
