@@ -56,7 +56,7 @@
     <div class="clear"></div>
     <div id="header-interno">
 
-        <a href="<?php bloginfo('url'); ?>"><img style="max-height:110px;" src="<?php echo get_option('pasw_logo'); ?>" alt="" class="logo"/></a>
+        <a href="<?php bloginfo('url'); ?>"><img style="max-height:110px;" src="<?php echo get_option('pasw_logo'); ?>" alt="logo" class="logo"/></a>
 
 <div class="contatti">
 <?php
