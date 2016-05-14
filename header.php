@@ -55,9 +55,11 @@
         ?>
     <div class="clear"></div>
     <div id="header-interno">
-
-        <a href="<?php bloginfo('url'); ?>"><img style="max-height:110px;" src="<?php echo get_option('pasw_logo'); ?>" alt="logo" class="logo"/></a>
-
+		<?php 
+		$header_image = get_option('pasw_logo');
+		if ( ! empty( $header_image ) ) { ?>
+        <a href="<?php bloginfo('url'); ?>"><img style="max-height:110px;" src="<?php echo get_option('pasw_logo'); ?>" alt="vai alla home" class="logo"/></a>
+		<?php } ?>
 <div class="contatti">
 <?php
 	$site_url = get_site_url();
