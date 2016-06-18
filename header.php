@@ -56,8 +56,9 @@
     <div class="clear"></div>
     <div id="header-interno">
 		<?php 
-		$header_image = get_option('pasw_logo');
-		if ( ! empty( $header_image ) ) { ?>
+		$header_image = get_option('pasw_logo');	
+		$lung= strlen($header_image);
+		if ( $lung > 7 ) { ?>
         <a href="<?php bloginfo('url'); ?>"><img style="max-height:110px;" src="<?php echo get_option('pasw_logo'); ?>" alt="vai alla home" class="logo"/></a>
 		<?php } ?>
 <div class="contatti">
