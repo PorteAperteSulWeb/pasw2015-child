@@ -7,6 +7,8 @@ function enqueue_parent_theme_style() {
 	wp_enqueue_style( 'pasw2015_parent-style', get_template_directory_uri().'/style.css' );
 }
 
+
+
 function pasw2015_child_widgets_init() {
 
     register_sidebar( array(
@@ -64,4 +66,8 @@ function my_login_messages($error) {
 
 add_filter('login_errors','my_login_messages');
 add_filter('pasw2015childedition', function($text) {return 'G';});
-
+function add_types_files($mime_types){
+	    $mime_types['p7m'] = 'application/p7m'; //Adding p7m extension
+	    return $mime_types;
+	}
+add_filter('upload_mimes', 'add_types_files');
