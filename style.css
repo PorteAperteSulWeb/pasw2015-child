@@ -8,6 +8,15 @@ Template: pasw2015
  
 /* Start personalizzazioni CSS */
 
+/* Rimuovereil commento per far si che lo sfondo dell'header non si ripeta e si adatta allo spazio
+ 
+#header{
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+*/
+
 .contatti {
 float:right;
 padding: 5px 10px 5px;
